@@ -1,0 +1,16 @@
+version: '3'
+services:
+  bedrock.test:
+    container_name: bedrock.test
+    image: pagevamp/nginx-php7-fpm:7.2
+    restart: always
+    environment:
+      - VIRTUAL_HOST=bedrock.test
+    volumes:
+      - ./:/var/www
+      - ./docker/sites/default.conf:/etc/nginx/sites-enabled/default
+    networks:
+      - pagevamp
+networks:
+  pagevamp:
+    external: true
