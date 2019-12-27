@@ -1,0 +1,16 @@
+.idea
+web/wp
+.env
+vendor
+
+!web/app/plugins
+web/app/plugins/*
+
+!web/app/mu-plugins
+web/app/mu-plugins/*
+
+!web/app/themes
+web/app/themes/*
+
+!web/app/uploads
+web/app/uploads/*
