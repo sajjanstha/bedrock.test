@@ -1,7 +1,7 @@
 name: bedrock
 recipe: wordpress
-proxy:                
-  nginx:              # Optional: if you exclude this, Lando will serve it as bedrock.lndo.site
+proxy:
+  appserver_nginx:              # Optional: if you exclude this, Lando will serve it as bedrock.lndo.site
     - bedrock.test
   theme:              # Optional: add this if you include the Sage specific config down below
     - localhost:3000
