@@ -1,7 +1,8 @@
 // import external dependencies
 import 'jquery';
 import 'slick-carousel/slick/slick.min.js';
-
+import 'isotope-layout/dist/isotope.pkgd.min';
+import 'imagesloaded/imagesloaded.pkgd.min';
 // Import everything from autoload
 import './autoload/**/*'
 
