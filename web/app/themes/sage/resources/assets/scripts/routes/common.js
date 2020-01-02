@@ -1,8 +1,11 @@
+import enterView from 'enter-view/enter-view.min';
+
 export default {
   init() {
     // JavaScript to be fired on all pages
   },
   finalize() {
+
     // JavaScript to be fired on all pages, after page specific JS is fired
     $(".slider-area").slick({
       dots: true,
