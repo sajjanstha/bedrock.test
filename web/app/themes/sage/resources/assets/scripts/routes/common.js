@@ -175,5 +175,137 @@ export default {
       return isTimerShown == "" || isTimerShown == null;
     }
 
+
+    //app.js
+    // slick slider and parallax
+// Masonary News
+// Isotope Initialization
+    $('#container').imagesLoaded( function() {
+      // images have loaded
+      var $container = $('.review-wrap')
+
+      $container.isotope({
+        // options
+        itemSelector: '.review-wrap__review'
+      })
+    });
+
+    jQuery(function($){
+      $('li.menu-item a[href*="#"]').on('click',function (e) {
+        // e.preventDefault();
+
+        var target = this.hash,
+          $target = $(target);
+
+        $('html, body').stop().animate({
+          'scrollTop': $target.offset().top + 50
+        }, 900, 'swing', function () {
+          window.location.hash = target;
+        });
+      });
+
+      $('li.menu-item a[href*="#"],a.scrolltoexplore').on('click',function (e) {
+        //e.preventDefault();
+
+        var target = this.hash,
+          $target = $(target);
+
+        $('html, body').stop().animate({
+          'scrollTop': $target.offset().top + 50
+        }, 900, 'swing', function () {
+          window.location.hash = target;
+
+          if ($('#menuToggle input[type="checkbox"]').is(':checked')) {
+            $('#menuToggle input[type="checkbox"]').trigger('click');
+          }
+        });
+      });
+
+      $('#modal-contact').on('show.bs.modal', function (e) {
+        if ($('#menuToggle input[type="checkbox"]').is(':checked')) {
+          $('#menuToggle input[type="checkbox"]').trigger('click');
+        }
+      });
+    });
+
+    var lazyImages = [].slice.call(document.querySelectorAll(".lazy"));
+
+    var lazyImageObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var lazyImage = entry.target;
+
+          var img = new Image();
+          img.src = lazyImage.dataset.src;
+          img.onload = function () {
+            if (lazyImage.dataset.img) {
+              console.log('inside')
+              lazyImage.src = lazyImage.dataset.src;
+              lazyImage.classList.remove("bg-lazyloading");
+              lazyImage.classList.add("bg-lazyloaded");
+              lazyImageObserver.unobserve(lazyImage);
+            } else {
+              lazyImage.style.backgroundImage = "url('" + lazyImage.dataset.src + "')";
+              // lazyImage.srcset = lazyImage.dataset.srcset;
+              lazyImage.classList.remove("bg-lazyloading");
+              lazyImage.classList.add("bg-lazyloaded");
+              lazyImageObserver.unobserve(lazyImage);
+            }
+          }
+        }
+      });
+    });
+
+    lazyImages.forEach(function (lazyImage) {
+      lazyImageObserver.observe(lazyImage);
+    });
+
+    //Curren Navigation active Css
+    $(document).ready(function() {
+
+      // Get current page URL
+      var url = window.location.href;
+
+      if (url.indexOf('#') != -1) {
+        url = url.substring(0, (url.indexOf("#") == -1) ? url.length : url.indexOf("#"));
+        // will not be triggered because str has _..
+      }
+
+
+      // Loop all menu items
+      $('.navbar-nav li').each(function(){
+
+        // select href
+        var href = $(this).find('a').attr('href');
+        console.log(url);
+        console.log(href);
+
+
+        // Check filename
+        if(url == href){
+
+          // Add active class
+          $(this).addClass('nav--2020__active');
+        }
+      });
+    });
+
+    window.addEventListener("load", function (event) {
+
+      window.addEventListener("scroll", function (event) {
+
+        var top = this.scrollY;
+        console.log(top);
+
+      });
+
+    });
+
+
+    function isValidEmailAddress(emailAddress) {
+      var pattern = new RegExp(/^(("[\w-+\s]+")|([\w-+]+(?:\.[\w-+]+)*)|("[\w-+\s]+")([\w-+]+(?:\.[\w-+]+)*))(@((?:[\w-+]+\.)*\w[\w-+]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][\d]\.|1[\d]{2}\.|[\d]{1,2}\.))((25[0-5]|2[0-4][\d]|1[\d]{2}|[\d]{1,2})\.){2}(25[0-5]|2[0-4][\d]|1[\d]{2}|[\d]{1,2})\]?$)/i);
+      return pattern.test(emailAddress);
+    };
+
   },
 };
