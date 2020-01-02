@@ -1,0 +1,213 @@
+$mask-bg: #26262c;
+$agree-bg: #D1D1D1;
+
+// #ad-popup__mask {
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     z-index: 9000;
+//     background-color: $mask-bg;
+//     display: none;
+// }
+
+// #ad-popup .window {
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     width: 440px;
+//     height: 850px;
+//     display: none;
+//     z-index: 9999;
+//     padding: 20px;
+//     border-radius: 5px;
+//     text-align: center;
+// }
+
+// #ad-popup #dialog {
+//     width: 450px;
+//     height: auto;
+//     padding: 10px 10px 10px 10px;
+//     background-color: $white;
+//     font-size: 15pt;
+// }
+// .ad-popup{
+//     top: 50%;
+//     left: 50%;
+//     display: none;
+//     &__mask{
+//         width: 2478px; 
+//         font-size: 32pt; 
+//         color: $white; 
+//         height: 1202px; 
+//         display: none; 
+//         opacity: 0.4;
+//     }
+// }
+
+// .agree:hover {
+//     background-color: $agree-bg;
+// }
+
+// .popupoption:hover {
+//     background-color: $agree-bg;
+//     color: $green;
+// }
+
+// .popupoption2:hover {
+//     color: $red;
+// }
+
+//popup 
+#mask {
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:9000;
+    background-color:$mask-bg;
+    display:none;
+  }  
+  #ad-popup .window {
+    position:absolute;
+    left:0;
+    top:0;
+    width:440px;
+    height:850px;
+    display:none;
+    z-index:99999;
+    // padding:20px;
+    border-radius: 0;
+    text-align: center;
+  }
+  #ad-popup #dialog {
+    width: 90%; 
+    height: auto;
+    margin: 30px 0;
+    padding: 30px 30px 30px 60px;
+    background-color:#ffffff;
+    font-size: 15pt;
+    max-width: 1100px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    @include media-breakpoint-down(xs){
+        padding: 30px 30px 30px 40px;
+    }
+
+
+    @include media-breakpoint-up(md){
+        width: 80%; 
+    }
+    @include media-breakpoint-up(lg){
+        width: 66%; 
+    }
+    @include media-breakpoint-up(xl){
+        width: 55%; 
+    }
+    @media (min-width:1500px){
+        width:40%;
+    }
+  }
+  #ad-popup #dialog:before {
+    content: "";
+    background-color: #F8CE1A;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 23px;
+    height: 100%;
+}
+.agree{
+    position: absolute;
+    right: -12px;
+    top: -12px;
+    img{
+        width: 25px;
+        height: 25px;
+    }
+
+}
+span.woo-sctr-shortcode-countdown-1 {
+    display: flex !important;
+    width: 100%;
+    justify-content: center;
+    @include media-breakpoint-up(md){
+        justify-content: left;
+    }
+}
+  .popupoption:hover{
+      background-color: $agree-bg;
+      color: $green;
+  }
+  .popupoption2:hover{
+      color: $red;
+  }
+
+  .ad-popup{
+      &__container{
+        top: 0; 
+        left: 0; 
+        display: none;
+      }
+      &__row{
+        min-height: 280px;
+        // padding: 0 10px 0 10px;
+        // @include media-breakpoint-up(lg){
+        //     padding: 0 60px 0 60px;
+
+        // }
+      }
+      &__mask{
+        width: 2478px; 
+        font-size: 32pt; 
+        color:$white; 
+        height: 1202px; 
+        display: none; 
+        opacity: 0.4;
+      }
+  }
+
+  .timer-logo__visitNepal{
+      width: 100%;
+      max-width: 191px;
+      height: auto;
+  }
+
+span.woo-sctr-shortcode-countdown-text-before {
+    font-size: 27px;
+    font-weight: 500;
+    line-height: 1;
+    padding-bottom: 15px;
+    @media (max-width:451px){
+        font-size: 21px;
+    }
+    @media (max-width:375px){
+        font-size: 19px;
+    }
+    @media (max-width:345px){
+        font-size: 17px;
+    }
+    
+}
+.woo-sctr-shortcode-countdown-text {
+    font-weight: 700;
+}
+
+.woo-sctr-shortcode-countdown-unit{
+    display: flex;
+    /* flex-direction: row-reverse; */
+    flex-flow: row-reverse wrap;
+    justify-content: center;
+}
+
+.woo-sctr-shortcode-countdown-value {
+    font-size: 36px !important;
+    font-weight: bold;
+}
+
+.woo-sctr-shortcode-wrap-wrap.woo-sctr-shortcode-wrap-wrap-inline.woo-sctr-shortcode-wrap-wrap-1 {
+    justify-content: center;
+    @include media-breakpoint-up(md){
+        justify-content: left;
+    }
+}
+html, body {
+    overflow: visible;
+}

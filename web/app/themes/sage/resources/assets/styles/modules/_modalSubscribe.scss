@@ -1,0 +1,207 @@
+.modal {
+    &-contact {
+        .modal {
+            &-title {
+                @include media-breakpoint-up(lg) {
+                    margin-bottom: 20px;
+                }
+            }
+            &-dialog {
+                max-width: 334px;
+
+                @include media-breakpoint-up(sm) {
+                    max-width: 642px;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    max-width: 1300px;
+                }
+            }
+
+            &-content {
+                @include border-radius(0);
+                padding: 0 15px;
+                @include media-breakpoint-up(lg) {
+                    padding: 0 30px;
+                }
+            }
+
+            &-header {
+                border: none;
+                padding: rem(60px 20px 10px);
+
+                @include media-breakpoint-up(sm) {
+                    padding: rem(50px 30px 20px);
+                }
+
+                @include media-breakpoint-up(lg) {
+                    padding: rem(50px 40px 20px);
+                }
+
+                .close {
+                    font-size: rem(18px);
+                    @include transition(all 0.2s ease);
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    @include opacity(0.2);
+                    svg {
+                        width: 32px;
+                        height: 32px;
+                    }
+
+                    @include media-breakpoint-up(md) {
+                        top: 30px;
+                        right: 30px;
+                    }
+
+                    @include media-breakpoint-up(lg) {
+                        top: 40px;
+                        right: 40px;
+                    }
+                }
+            }
+
+            &-body {
+                padding: rem(0 20px 35px);
+
+                @include media-breakpoint-up(sm) {
+                    padding: rem(0 30px 75px);
+                }
+
+                @include media-breakpoint-up(lg) {
+                    padding: rem(0 40px 75px);
+                }
+
+                .title {
+                    font-size: rem(16px);
+                    color: $black;
+                    font-weight: 300;
+                    letter-spacing: rem(-0.45px);
+                }
+            }
+        }
+        .btn-dark {
+            &.active {
+                background: $yellow !important;
+            }
+        }
+
+        .form-control {
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 0;
+                border-color: black(0.5);
+            }
+        }
+
+        input {
+            border-color: black(0.25);
+            height: 50px;
+            min-height: 50px;
+            padding: 0 20px;
+            line-height: 1;
+        }
+
+        textarea {
+            border-color: black(0.25);
+            @include placeholder {
+                font-size: rem(14px);
+
+                @include media-breakpoint-up(md) {
+                    font-size: rem(16px);
+                }
+            }
+        }
+
+        .btn {
+            min-height: 50px;
+            padding-left: rem(48px);
+            padding-right: rem(48px);
+            font-weight: 600;
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 0;
+                border-color: black(0.5);
+            }
+        }
+
+        .btn-outline-secondary {
+            border-color: black(0.5);
+            color: $black;
+            &:hover,
+            &:focus {
+                background-color: $black;
+                color: $white;
+            }
+        }
+
+        &__radio {
+            .btn {
+                padding-left: rem(30px);
+                padding-right: rem(30px);
+                display: block;
+
+                @include media-breakpoint-up(sm) {
+                    display: inline-block;
+                }
+            }
+            .btn-dark {
+                background-color: $white;
+                border-color: black(0.3);
+                color: $gray-600;
+                font-size: 15px !important;
+                line-height: 50px;
+                font-weight: 400;
+                padding: 0;
+                &.active {
+                    color: $black;
+                }
+            }
+            .btn-dark:not(:disabled):not(.disabled):active,
+            .btn-dark:not(:disabled):not(.disabled).active,
+            .show > .btn-dark.dropdown-toggle {
+                border-color: black(0.3);
+                color: $black;
+            }
+            .btn-dark:focus,
+            .btn-dark:not(:disabled):not(.disabled):active:focus,
+            .btn-dark:not(:disabled):not(.disabled).active:focus,
+            .show > .btn-dark.dropdown-toggle:focus {
+                outline: none;
+                box-shadow: 0 0 0;
+                border-color: black(0.5);
+            }
+        }
+    }
+}
+
+.contact {
+    &-message {
+        padding-left: 0;
+        margin-left: 0;
+        height: 100%;
+        border-left: none;
+        @include media-breakpoint-up(lg) {
+            padding-left: 65px;
+            margin-left: 75px;
+            border-left: 1px solid $secondary;
+        }
+        @include media-breakpoint-down(md) {
+            border-top: 1px solid black(.35);
+            padding-top: 35px;
+            margin-top: 50px !important;
+        }
+        h4 {
+            font-weight: 500;
+        }
+        .small {
+            font-weight: 600;
+        }
+    }
+    &-form {
+        @include media-breakpoint-up(lg) {
+            width: 700px;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+@import 'global/path',
+'global/fonts',
+'base/functions';
+
+
+
+@import //'vendors/animate/animate',
+'vendors/bootstrap/bootstrap',
+'vendors/icons/icons';
+
+@import 'base/global-vars';
+
+@import 'mixins/mixins';
+
+@import 'utilities/placeholders',
+'utilities/typo',
+'utilities/helper',
+'utilities/config';
+
+@import //'modules/accordion',
+// 'modules/alert',
+// 'modules/blockquote',
+// 'modules/breadcrumbs',
+'modules/aos',
+'modules/buttons',
+'modules/cards',
+'modules/carousel',
+'modules/dropdowns',
+'modules/forms',
+'modules/hamburger',
+'modules/hr',
+'modules/label',
+'modules/list',
+// 'modules/loader',
+// 'modules/media',
+'modules/modal',
+'modules/modalSubscribe',
+// 'modules/nano',
+'modules/navbar',
+// 'modules/or',
+// 'modules/tab',
+'modules/pagination',
+// 'modules/panel',
+'modules/popup',
+// 'modules/pushy',
+'modules/slick',
+'modules/slick-theme',
+'modules/social',
+'modules/experiences',
+'modules/news',
+// 'modules/table',
+'modules/page404',
+'modules/title';
+
+@import 'layout/above-the-fold',
+'layout/header',
+'layout/global-nav',
+'layout/search-form',
+'layout/mobile-nav-wrap',
+'layout/main',
+// 'layout/sidebar',
+'layout/latest-post',
+// 'layout/inside-ad-wrap',
+'layout/explore',
+'layout/cat-list',
+'layout/more-latest',
+'layout/trending',
+'layout/e-magazine',
+'layout/newsletter',
+'layout/common-post',
+'layout/featured',
+'layout/slider-wrap',
+'layout/footer';
+
+@import 'modules/gallery',
+        'modules/innerPageBg',
+        'modules/events';

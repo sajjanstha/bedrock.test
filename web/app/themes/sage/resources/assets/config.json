@@ -2,7 +2,7 @@
   "entry": {
     "main": [
       "./scripts/main.js",
-      "./styles/main.scss"
+      "./styles/app.scss"
     ],
     "customizer": [
       "./scripts/customizer.js"

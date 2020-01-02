@@ -1,0 +1,44 @@
+.page-404{
+    height: 162px !important;
+}
+.line-height-404{
+    line-height: 20px;
+}
+::-moz-selection {
+    background: transparent;
+    color: #03a9f4;
+  }
+  ::selection {
+    background: transparent;
+    color: #03a9f4;
+  }
+.error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    font-size: 16px;
+  }
+  
+  
+.error-text {
+    margin: 0;
+    font-size: 6em;
+    font-weight: bold;
+    line-height: 0.85;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    @include media-breakpoint-down(sm){
+        font-size: 4em;
+    }
+  
+    span {
+      display: block;
+      word-wrap: break-word;
+  
+      &.bigger {
+        font-size: 1.5em;
+      }
+    }
+  }
+  

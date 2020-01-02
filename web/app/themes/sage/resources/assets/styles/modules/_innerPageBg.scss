@@ -1,0 +1,41 @@
+.theme{
+    &-innerpages{
+        &__bg{
+            background: url('../images/bg-innerpages@2x.png');
+            background-repeat: no-repeat;
+            background-color: $white;
+            background-position: top right;
+            background-size: 100% 100%;
+            position: absolute;
+            top: 160px;
+            left: 0;
+            width: 100vw;
+            height: 100%;
+            max-height: 753px;
+            z-index: 0;
+            @media (max-width:991px){
+                top: 0;
+            }
+            &:before {
+                content: "";
+                background: linear-gradient(0deg, #FFFFFF 0%, rgba(255,255,255,0) 100%);
+                z-index: 5;
+                background-size: 100% 100%;
+                width: 100%;
+                position: absolute;
+                height: 100%;
+            }
+            &:after {
+                background: linear-gradient(135deg, #FFFFFF 0%, rgba(255,255,255,0) 100%);
+                content: "";
+                position: absolute;
+                z-index: 5;
+                background-size: 100% 100%;
+                width: 100%;
+                position: absolute;
+                height: 100%;
+            }
+        }
+    }
+
+}

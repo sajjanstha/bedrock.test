@@ -1,0 +1,24 @@
+html,
+body {
+    height: auto;
+    font-size: 10px;
+    // position: relative;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch !important; // Makes the smooth scrolling on ios devices
+    
+}
+
+body {
+    font-size: rem(12px);
+    letter-spacing: normal;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    @include font-smoothing(on);
+    letter-spacing: normal;
+    @include media-breakpoint-up(lg) {
+        font-size: rem(14px);
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: rem(16px);
+    }
+}

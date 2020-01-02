@@ -1,0 +1,47 @@
+.trending {
+    margin-bottom: rem(50px);
+    @include media-breakpoint-up(lg) {
+        margin-bottom: rem(60px);
+    }
+    @include media-breakpoint-up(xl) {
+        margin-bottom: rem(80px);
+    }
+    .hr {
+        margin-bottom: rem(40px);
+    }
+    &__header {
+        @extend .position-relative;
+        margin-bottom: rem(40px);
+        &::after {
+            content: '';
+            background-color: $danger;
+            @extend .h-100, .position-absolute;
+            width: rem(6px);
+            top: 0;
+            right: 0;
+            @include media-breakpoint-up(md) {
+                width: rem(6px);
+            }
+            @include media-breakpoint-up(lg) {
+                width: rem(12px);
+            }
+        }
+    }
+    // &__post {
+    //     >div {
+    //         &::before {
+    //             content: '';
+    //             background-color: $border-color;
+    //             @extend .h-100, .position-absolute;
+    //             width: rem(1px);
+    //             top: 0;
+    //             left: 0;
+    //         }
+    //         &:first-child {
+    //             &::before {
+    //                 display: none;
+    //             }
+    //         }
+    //     }
+    // }
+}

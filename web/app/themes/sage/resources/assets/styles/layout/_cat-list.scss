@@ -1,0 +1,53 @@
+.cat-list {
+    > li {
+        > div {
+            padding: rem(14px 0 27px);
+        }
+    }
+    &__counter {
+        line-height: 1;
+    }
+    &--content {
+        > li {
+            > div {
+                border-top: 1px solid white(0.1);
+            }
+            a {
+                @extend .link-white;
+            }
+        }
+    }
+    &--nav {
+        margin-top: rem(189px);
+        > li {
+            @extend .transition-slow;
+            > div {
+                border-top: 1px solid $border-color;
+            }
+            a {
+                color: $black;
+            }
+        }
+        &:hover {
+            > li {
+                opacity: 0.2;
+            }
+            > li {
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &--inner {
+        > li {
+            @extend .transition-slow;
+            > div {
+                border-top: 1px solid $border-color;
+            }
+            a {
+                color: $black;
+            }
+        }
+    }
+}

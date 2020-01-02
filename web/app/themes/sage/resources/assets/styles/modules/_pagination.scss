@@ -1,0 +1,63 @@
+.#{$global} {
+    &-pagination {
+        .previous,
+        .next {
+            height: 35px;
+            width: auto;
+        }
+        .page-numbers {
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 5.71px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+    }
+    &-pager {
+        .controller {
+            margin-left: 40px;
+            position: relative;
+            &::before {
+                content: "|";
+                position: absolute;
+                font-weight: 300;
+                top: 50%;
+                transform: translateY(-50%);
+                right: -22px;
+                color: #ababab;
+                font-size: rem(20px);
+            }
+            &:last-child {
+                &::before {
+                    display: none;
+                }
+            }
+            img {
+                max-height: 17px;
+            }
+            &-next {
+                img {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}
+
+.number-pager {
+    .previous {
+        margin-right: 70px;
+    }
+    .next {
+        margin-left: 70px;
+    }
+    .page-numbers {
+        margin: 0 3px;
+    }
+    .separator {
+        margin-right: 5px;
+    }
+}

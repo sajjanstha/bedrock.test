@@ -1,0 +1,29 @@
+.slider-wrap {
+    background-color: $white;
+    padding: rem(42px 0);
+    position: relative;
+    z-index: 1000;
+    overflow: hidden;
+    margin-bottom: rem(50px);
+    &::after,
+    &::before {
+        content: "";
+        background-color: $border-color;
+        width: 100%;
+        height: rem(1px);
+        position: absolute;
+        left: rem(10px);
+    }
+    &::after {
+        top: rem(10px);
+    }
+    &::before {
+        bottom: rem(10px);
+    }
+    .display-3 {
+        margin-bottom: rem(22px);
+    }
+    &--overlap {
+        margin-bottom: rem(-20px);
+    }
+}

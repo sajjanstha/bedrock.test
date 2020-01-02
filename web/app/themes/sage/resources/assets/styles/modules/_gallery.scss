@@ -1,0 +1,198 @@
+.#{$global} {
+    &-gallery {
+        padding-top: rem(62px);
+
+        @include media-breakpoint-up(lg) {
+            height: 160px;
+        }
+
+        &__title {
+            margin-bottom: rem(25px);
+        }
+
+        &__links {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                display: inline-block;
+                margin-right: rem(30px);
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                a {
+                    color: rgba(0, 0, 0, 0.5);
+                }
+
+                .active {
+                    color: $red;
+                    display: inline-block;
+                    position: relative;
+                    padding-bottom: rem(10px);
+
+                    &:before {
+                        content: "";
+                        border-bottom: 1px solid $red;
+                        width: calc(100% - 4px);
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+
+        &__album {
+            margin-bottom: 30px;
+            &-single {
+                margin-bottom: rem(70px);
+            }
+
+        }
+
+        &__single {
+            h2 {
+                line-height: 56px;
+                letter-spacing: -1px;
+            }
+
+            &-back {
+                height: 14px;
+                width: auto;
+                margin-right: 20px;
+            }
+
+            .back {
+                font-size: 14px;
+                font-weight: 600;
+                letter-spacing: 4px;
+                line-height: 14px;
+                color: rgba(0, 0, 0, 0.5);
+            }
+
+        }
+        &__posts{
+            padding-top: 102px;
+            padding-bottom: 100px;
+        }
+    }
+
+}
+
+.card {
+    &-theme {
+        &-gallery {
+            position: relative;
+
+            &__thumbnails {
+                width: calc(100% - 78px);
+                height: auto;
+                position: relative;
+            }
+
+            &__thumbnail {
+                width: calc(100% - 78px);
+                height: auto;
+                min-height: rem(319px);
+                object-position: center;
+                max-width: rem(364px);
+                margin-left: rem(26px);
+
+                &-video {
+                    width: 100%;
+                    height: auto;
+                    min-height: rem(319px);
+                    object-position: center;
+                    max-width: rem(364px);
+                    // margin-left: rem(26px); 
+                }
+            }
+
+            &__title {
+                font-size: rem(14px);
+                line-height: rem(14px);
+                letter-spacing: rem(1.5px);
+                font-weight: 600;
+                color: $red;
+                text-transform: uppercase;
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin-right: 31px;
+            }
+
+            .video {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                height: 30px;
+                width: auto;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+.modal {
+    &-gallery {
+        &__pageNumbers{
+            color: black;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 22px;
+            letter-spacing: normal;
+        }
+        &__close {
+            height: 25px;
+            width: auto;
+        }
+        &__thumbnail{
+            width: 100%;
+            height: auto;
+            img{
+                width: 100%;
+            }
+        }
+        &__body{
+            padding: 50px 0;
+            margin-top: 80px;
+            @include media-breakpoint-up(md) {
+                padding: 70px 0 100px 0;
+            }
+        }
+        &__nav{
+            height: 25px;
+            width: auto;
+        }
+    }
+}
+
+.card-theme-gallery__thumbnails {
+    @include media-breakpoint-down(lg) {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+.card-theme-gallery__thumbnail-video {
+    @include media-breakpoint-down(lg) {
+        max-width: none;
+        margin: 0;
+        min-height: auto;
+        object-fit: unset;
+    }
+}
+
+.card-theme-gallery__title {
+    @include media-breakpoint-down(lg) {
+        writing-mode: unset;
+        transform: none;
+        text-align: left;
+        margin: 0;
+        position: relative;
+    }
+}
+

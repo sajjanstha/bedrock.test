@@ -1,0 +1,82 @@
+.#{$global} {
+    &-events {
+        padding-top: 90px;
+        &__searchbox {
+            width: 331px;
+            padding: 11px 0 10px 10px;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 19px;
+            color: rgba(0, 0, 0, 0.5);
+            border-radius: 4px;
+            outline: none;
+        }
+
+        &__thumbnail {
+            margin: 0;
+            position: relative;
+            width: 100%;
+            height: 275px;
+            overflow: hidden;
+
+            img {
+                position: absolute;
+                height: 110%;
+            }
+        }
+        &__single {
+            margin-bottom: rem(50px);
+        }
+    }
+
+    &-pagination {
+        &__gallery {
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+    }
+}
+
+.card {
+    &-events {
+        position: relative;
+
+        &__body {
+            padding: 25px 0 50px 0;
+
+        }
+    }
+}
+
+.modal {
+    &-events {
+        &__img {
+            height: auto;
+            min-height: 240px;
+            margin-bottom: 0;
+            @include media-breakpoint-up(md) {
+                min-height: 330px;
+            }
+            @include media-breakpoint-up(xl) {
+                margin-bottom: 20px;
+                min-height: 450px;
+            }
+            @media (max-width:450px){
+                min-height: 158px;
+            }
+        }
+
+        &__nav {
+            height: 15px;
+            width: 19.45px;
+        }
+
+        &__content {
+            margin-top: 60px;
+        }
+
+        .next {
+            margin-left: 30px;
+        }
+    }
+}

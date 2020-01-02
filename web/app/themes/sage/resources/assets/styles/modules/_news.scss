@@ -1,0 +1,176 @@
+#wrap {
+    width: 100%;
+    min-height: 100%;
+    height: auto !important;
+    position: relative;
+}
+
+// Breakpoint initilization
+@mixin breakpoint($point) {
+    @if $point==xxs {
+        @media (max-width: 480px) {
+            @content;
+        }
+    } @else if $point==xs {
+        @media (max-width: 767px) {
+            @content;
+        }
+    } @else if $point==sm {
+        @media (min-width: 768px) and (max-width: 991px) {
+            @content;
+        }
+    } @else if $point==md {
+        @media (min-width: 768px) and (max-width: 1199px) {
+            @content;
+        }
+    } @else if $point==md-d {
+        @media (min-width: 1200px) and (max-width: 1299px) {
+            @content;
+        }
+    } //md-d is of Medium Desktop
+    @else if $point==lg {
+        @media (max-width: 1440px) {
+            @content;
+        }
+    } @else {
+        @warn "Breakpoint mixin supports: xs, sm, md,md-d, lg";
+    }
+}
+
+// CSS Vendor Prefix [@include vendor-prefix(background-size, cover)]
+@mixin vendor-prefix($name, $argument) {
+    -webkit-#{$name}: #{$argument};
+    -ms-#{$name}: #{$argument};
+    -moz-#{$name}: #{$argument};
+    -o-#{$name}: #{$argument};
+    #{$name}: #{$argument};
+}
+
+// Word wrapping
+@mixin word-wrap {
+    white-space: normal;
+    word-break: initial;
+    /* For Firefix */
+    -ms-word-break: break-all;
+    word-break: break-word;
+    @include vendor-prefix("hyphens", initial);
+}
+
+.review-wrap {
+    margin: 0 -26px;
+    &__review {
+        width: 50%;
+        padding: 0 26px;
+        // @include breakpoint(sm) {
+        //     width: 50%;
+        // }
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
+    }
+    &-content {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        margin-top: 10px;
+        padding-top: 50px;
+        padding-bottom: 80px;
+        &__figure {
+            margin-bottom: 60px;
+        }
+    }
+}
+
+.card {
+    // &--news{
+    // &__link {
+    // width: 100%;
+    // height: 100%;
+    // cursor: pointer;
+    // @include position(absolute, $top: 0, $left: 0, $right: auto, $bottom: auto);
+    // z-index: 0;
+    // }
+    // }
+    &-theme-news {
+        border: none;
+        background: none;
+        width: 100%;
+        margin-bottom: 60px;
+
+        // @include media-breakpoint-up(sm) {
+        //     margin-bottom: 0;
+        //     width: 30.33% !important;
+        // }
+
+        // @include media-breakpoint-up(md) {
+        //     margin-bottom: 0;
+        //     width: 30.33% !important;
+        // }
+
+        // @include media-breakpoint-up(lg) {
+        //     width: 30.33% !important;
+        //      margin-bottom: 0;
+        // }
+
+        &-body {
+            padding-right: 0;
+            @include media-breakpoint-up(lg) {
+                padding-right: 52px;
+            }
+        }
+        &-img-top {
+            width: 100%;
+            height: rem(300px);
+            @include media-breakpoint-up(lg) {
+                height: rem(400px);
+            }
+            @include media-breakpoint-up(lg) {
+                height: rem(264px);
+            }
+
+            // @include media-breakpoint-up(sm) {
+            //     height: rem(104px);
+            // }
+
+            // @include media-breakpoint-up(md) {
+            //     height: rem(144px);
+            // }
+            // @include media-breakpoint-up(lg) {
+            //     height: rem(264px);
+            // }
+        }
+        &-title {
+            padding: 30px 0 8px 0;
+            font-weight: 600;
+            line-height: rem(28px);
+            font-size: rem(24px);
+            @include media-breakpoint-only(sm) {
+                font-size: rem(22px);
+                font-size: rem(18px);
+                // padding: 30px 0 8px 0;
+            }
+        }
+        &-text {
+            font-size: rem(14px);
+            line-height: rem(25px);
+            font-weight: 300;
+            @include media-breakpoint-only(sm) {
+                font-size: rem(13px);
+            }
+            padding-right: 0;
+            @include media-breakpoint-up(lg) {
+                padding-right: 52px;
+            }
+        }
+    }
+}
+
+.post-pager {
+    @extend .font-size-16, .font-face-sans-serif;
+    @include media-breakpoint-up(sm) {
+        font-size: rem(18px) !important;
+    }
+    &--bottom {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        padding-top: 30px;
+        margin-top: 80px;
+    }
+}

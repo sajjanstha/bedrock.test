@@ -1,0 +1,82 @@
+// Clear Padding and Margin
+%clear-gutter {
+    margin: 0;
+    padding: 0;
+}
+
+// Removes the list style
+%list-none {
+    list-style-type: none;
+}
+
+// Transparent BG for Background Images
+%bg-transparent {
+    content: '';
+    background-color: brand(.75);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+// Header Text
+%heading {
+    @extend .font-face-montserrat;
+}
+
+// Display
+%display {
+    @extend .font-face-sans-serif;
+    text-transform: uppercase;
+}
+
+
+// Content Gutter
+%content-gutter {
+        padding: rem(40px 0);
+    @include media-breakpoint-up(xl) {
+        padding: rem(80px 0);
+    }
+}
+.content-gutter{
+    @extend %content-gutter;
+}
+.content-gutter-60{
+    @extend %content-gutter-60;
+}
+
+.content-gutter-120{
+    padding: rem(120px 0);
+}
+.content-gutter-60__inner{
+    padding: rem(20px 0);
+    @include media-breakpoint-up(sm){
+        padding: rem(60px 0);
+    }
+}
+
+.content-gutter-60__news{
+    padding: rem(20px 0);
+    @include media-breakpoint-up(sm){
+        padding: rem(60px 0);
+    }
+}
+
+
+.content-gutter-64{
+    @extend %content-gutter-64;
+}
+
+%content-gutter-60 {
+    padding: rem(60px 0);
+}
+
+%content-gutter-0 {
+    padding: 0;
+}
+
+%content-gutter-64 {
+    padding: rem(64px 0);
+}

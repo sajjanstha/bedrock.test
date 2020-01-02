@@ -1,0 +1,88 @@
+.form-control {
+    // background-color: transparent;
+    border: 1px solid $black;
+    // border-bottom: 1px dashed;
+    min-height: rem(60px);
+    font-size: rem(12px);
+    padding: 12px 20px;
+    @extend .transition-fast;
+    @include border-radius(0);
+    &:focus {
+        // background-color: transparent;
+        border-color: $primary;
+        // border-bottom: 1px dashed;
+        outline: none;
+        box-shadow: 0 0 0;
+    }
+    @include media-breakpoint-up(md) {
+        font-size: rem(14px);
+    }
+    @include media-breakpoint-up(lg) {
+        font-size: rem(16px);
+    }
+    &--light {
+        border-color: black(0.2);
+        color: $black;
+        &::placeholder {
+            color: black(0.4);
+        }
+    }
+    &--white {
+        border-color: $white;
+        color: white;
+        &::placeholder {
+            color: white(0.2);
+        }
+    }
+}
+
+.form-inline {
+    label {
+        margin-bottom: rem(24px);
+    }
+    .form-group {
+        width: 100%;
+        @include media-breakpoint-up(md) {
+            width: calc(100% - 142px);
+            margin-right: rem(40px);
+        }
+        .form-control {
+            @extend .w-100;
+        }
+    }
+    .btn {
+        min-width: rem(100px);
+    }
+}
+
+input,
+.btn,
+button {
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0;
+    }
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: red;
+}
+
+// input:-internal-autofill-selected {
+//     background-color: transparent !important;
+// }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    box-shadow: 0 0 0 130px white inset !important;
+}
+
+.custom-select {
+    background: url("data:image/svg+xml,%0A%3Csvg width='8px' height='5px' viewBox='0 0 8 5' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Other-Pages' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' fill-opacity='0.25'%3E%3Cg id='Calendar' transform='translate(-1126.000000, -564.000000)' fill='%23000000'%3E%3Cg id='content' transform='translate(0.000000, 441.000000)'%3E%3Cg id='content-header' transform='translate(51.000000, 0.000000)'%3E%3Cg id='title' transform='translate(99.000000, 90.000000)'%3E%3Cg id='filter' transform='translate(663.000000, 15.000000)'%3E%3Cg id='input'%3E%3Cpolygon id='icon_arrow' points='313 18 317 23 321 18'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat right 0.75rem center/8px 10px;
+    height: 40px;
+    font-size: rem(15px);
+    color: rgba(0,0,0,.5);
+}

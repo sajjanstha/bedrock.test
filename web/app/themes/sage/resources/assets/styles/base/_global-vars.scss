@@ -1,0 +1,26 @@
+$global: "theme";
+
+$color-link: $secondary;
+$color-link-hover: $red;
+$color-link-visited: $secondary;
+$color-link-active: $secondary;
+
+$color-link-white: $white;
+$color-link-white-hover: $yellow;
+$color-link-white-visited: $white;
+$color-link-white-active: $white;
+
+$color-link-black: $black;
+$color-link-black-hover: $primary;
+$color-link-black-visited: $black;
+$color-link-black-active: $black;
+
+$color-link-light: lighten($black, 80%);
+$color-link-light-hover: $black;
+$color-link-light-visited: lighten($black, 80%);
+$color-link-light-active: lighten($black, 80%);
+
+$color-navbar: $white;
+$color-navbar-visited: $white;
+$color-navbar-hover: $primary;
+$color-navbar-active: $white;

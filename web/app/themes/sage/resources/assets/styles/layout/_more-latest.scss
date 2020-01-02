@@ -1,0 +1,30 @@
+.more-latest {
+    margin-bottom: rem(80px);
+    &__sidebar {
+        @extend .h-100, .position-relative;
+        &::after {
+            content: "";
+            background-color: $border-color;
+            width: rem(1px);
+            height: 100%;
+            @extend .position-absolute;
+            top: 0;
+            right: rem(-20px);
+        }
+        .card-latest__title {
+            white-space: nowrap;
+            @include media-breakpoint-up(lg) {
+                right: rem(-70px);
+            }
+            @include media-breakpoint-up(xl) {
+                right: rem(-45px);
+            }
+        }
+    }
+    .card-latest {
+        margin-bottom: rem(60px);
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

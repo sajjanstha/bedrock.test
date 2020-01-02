@@ -1,0 +1,54 @@
+.#{$global} {
+    &-header {
+        height: rem(165px);
+        -webkit-transition: all 0.4s ease;
+ 		transition: all 0.4s ease;
+        // z-index: 1001;
+        .navbar {
+            padding: 0;
+            @extend .font-size-12;
+            line-height: rem(14px);
+            letter-spacing: rem(2px);
+            &-nav {
+                .nav-item, .menu-item {
+                    margin-left: rem(24px);
+                    @extend .position-relative;
+                    
+                }
+                .nav-link, a {
+                    transition: all 0.5s ease;
+                    @extend .link-navbar;
+                    font-weight: 600;
+                }
+                
+            }
+        }
+        > .container {
+            position: relative;
+            z-index: 999;
+        }
+        &-wrap {
+            .link-navbar,
+            .theme-header .navbar-nav .nav-link {
+                @include links($color-link-black, $color-link-black, $color-link-black-hover, $color-link-black);
+            }
+            .theme-header {
+                height: auto;
+            }
+        }
+    }
+}
+
+
+
+//Header sticky top animation 
+header.sticky {
+    // font-size: 24px;
+    // line-height: 48px;
+    height: 48px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    background-color: #f4f4f4;
+    color: #000;
+    // text-align: left;
+    // padding-left: 20px;
+}
