@@ -26,10 +26,10 @@
                 </div>
 
                 <div class="carousel-item__innerpages active">
-                  <img src="<?php echo get_theme_file_uri("assets/images/news-hero-bg-thumb.jpg") ?>"
+                  <img src="@asset('images/news-hero-bg-thumb.jpg')"
                        class="carousel-img lazy bg-lazyloading" alt="Visit Nepal 2020" width="100%"
                        height="100%" data-img="true"
-                       data-src="<?php echo get_theme_file_uri("assets/images/news-hero-bg@2x.jpg") ?>" />
+                       data-src="@asset('images/news-hero-bg@2x.jpg')" />
                 </div>
               </div>
             </div>
