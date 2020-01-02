@@ -4,10 +4,7 @@
            class="theme-gallery__album-single--link link-black theme-events__link "
         >
             <div class="card-date z-index-10  card-date__multiple d-flex flex-row">
-
-                <?php
-                     //echo get_finalized_date(get_post());
-                ?>
+                {!! App\get_finalized_date(get_post()) !!}
             </div>
             <figure class="theme-events__thumbnail">
                 <?php if (has_post_thumbnail()): ?>

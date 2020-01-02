@@ -1,4 +1,3 @@
-<!-- news modal  -->
 <div class="modal modal--news modal--fullwidth fade bg-white" id="eventModal<?php the_ID() ?>"
     data-post_id="<?php the_ID() ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel"
     aria-hidden="true">
@@ -77,4 +76,3 @@
         </div>
     </div>
 </div>
-<!-- end of  news modal -->
