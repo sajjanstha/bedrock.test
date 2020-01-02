@@ -136,3 +136,18 @@ function display_sidebar()
     isset($display) || $display = apply_filters('sage/display_sidebar', false);
     return $display;
 }
+
+if (!function_exists('get_short_event_date')) {
+    function get_short_event_date($event)
+    {
+        $type = get_post_meta($event->ID, 'type', true);
+        $startDateTime = get_post_meta($event->ID, 'start_date_time', true);
+        switch ($type) {
+            case 'Throughout Year':
+                return "365<span class='month d-block pt-3'>days</span>";
+                break;
+            default:
+                return date('d', strtotime($startDateTime)) . "<span class='month d-block pt-3'>" . date('M', strtotime($startDateTime)) . "</span>";
+        }
+    }
+}
