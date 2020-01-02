@@ -174,7 +174,6 @@ export default {
       var isTimerShown=getCookie("timer_shown");
       return isTimerShown == "" || isTimerShown == null;
     }
-    alert('test');
 
   },
 };

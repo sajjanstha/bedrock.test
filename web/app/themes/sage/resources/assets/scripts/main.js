@@ -3,6 +3,7 @@ import 'jquery';
 import 'slick-carousel/slick/slick.min.js';
 import 'isotope-layout/dist/isotope.pkgd.min';
 import 'imagesloaded/imagesloaded.pkgd.min';
+import 'jquery-match-height/dist/jquery.matchHeight-min';
 // Import everything from autoload
 import './autoload/**/*'
 
