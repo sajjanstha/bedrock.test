@@ -1,7 +1,6 @@
 @extends('layouts.inner')
 
 @section('content')
-  <!-- Start of Newsroom session -->
   <section class="theme-content content-gutter pb-0 pt-0 z-index-25" id="news">
     <div id="wrap position-relative">
       <div class="container">
@@ -177,40 +176,30 @@
           </div>
 
         </div>
-        <?php if ($the_query->found_posts): ?>
+        @if ($the_query->found_posts)
         <div class="theme-pagination">
           <div class="container">
             <div class="row">
               <div class="col">
                 <div class="number-pager d-flex justify-content-center align-items-center">
-                  <?php previous_posts_link($prev_post_img); ?>
+                  @php(previous_posts_link($prev_post_img))
                   <a href="javascript:;">
-                    <span class="page-numbers"><?php echo $current_page; ?></span>
+                    <span class="page-numbers">{{ $current_page }}</span>
                   </a>
                   <span class="separator">/</span>
                   <a href="<?php echo $current_page != $the_query->max_num_pages ? $lastPageUrl : 'javascript:;' ?>">
-                    <span class="page-numbers"><?php echo $the_query->max_num_pages ?></span>
+                    <span class="page-numbers">{{ $the_query->max_num_pages }}</span>
                   </a>
-                  <?php if ($current_page != $the_query->max_num_pages) next_posts_link($next_post_img); ?>
+                  @if ($current_page != $the_query->max_num_pages) @php(next_posts_link($next_post_img)) @endif
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <?php endif; ?>
+        @endif
       </div>
     </div>
   </section>
-  <!-- End of Newsroom section -->
 
-  <?php
-  $the_query->rewind_posts();
-  if ($the_query->have_posts()) :
-    while ($the_query->have_posts()) : $the_query->the_post(); ?>
-      @include('partials.page.events.content-modal')
-  <?php
-    endwhile;
-  endif;
-  wp_reset_postdata();
-  ?>
+
 @endsection
